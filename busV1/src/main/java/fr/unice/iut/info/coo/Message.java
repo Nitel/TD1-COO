@@ -1,84 +1,80 @@
 package fr.unice.iut.info.coo;
 
 
+import java.util.Date;
+
 /**
  * <!-- begin-user-doc -->
  * <!--  end-user-doc  -->
  * @generated
  */
 
-public class Message
-{
+public class Message {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 * @ordered
 	 */
+	
+	private String corpsMessage;
+	private String message;
+	private Date dateMessage;
 
-    public char Titre;
-	public char Contenu;
+	//CONSTRUCTEUR
+	public Message(String corpsMessage)
+	{
+		System.out.println("Création du constructeur de la classe Message");
+		this.corpsMessage = corpsMessage;
+		this.message = message;
+		this.dateMessage = dateMessage;
+
+	}
+
+	//GENERATION DES ACESSEUR DE CONSULTATION GETTER SETTER
+
+	public String getCorpsMessage() {
+
+		return corpsMessage;
+	}
+
+	public void setCorpsMessage(String corpsMessage) {
+
+		this.corpsMessage = corpsMessage;
+	}
+
+	public String getMessage() {
+
+		return message;
+	}
+
+	public void setMessage(String message) {
+
+		this.message = message;
+	}
+
+	public Date getDateMessage() {
+		return dateMessage;
+	}
+
+	public void setDateMessage(Date dateMessage) {
+		this.dateMessage = dateMessage;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
 	 * @generated
-     * @param titre
-     * @param text
 	 */
-	public Message(final char titre, final char text){
-		super();
+//methode toString
+	public String toString(){
+		return "Contenu du message : " + corpsMessage + "\n Message crée le : "  + dateMessage;
 	}
 
-    public Message(final char contenu) {
-        Contenu = contenu;
-    }
 
-    public static Builder builder() { return new Builder();}
 
-    public static class Builder {
-        private char Contenu;
 
-        public Builder setContenu(final char Contenu) {
-            this.Contenu = Contenu;
-            return this;
-        }
 
-        public Message build() {
-            return new Message(this.Contenu);
-        }
-    }
 
-    public char getContenu() {
-
-        return Contenu;
-    }
-
-    @Override
-    public String toString() {
-        return "Message{"+
-            "Contenu="+Contenu+
-            ", Tire="+Titre+
-            '}';
-    }
-
-    public char getTire() {
-
-        return Titre;
-    }
-
-    @Override
-    public boolean equals(final Object o) {
-
-        if (this == o) { return true; }
-        if (!(o instanceof Message)) { return false; }
-        Message message = (Message) o;
-        return Titre == message.Titre;
-    }
-
-    @Override
-    public int hashCode() {
-        return (int) Titre;
-    }
 }
 

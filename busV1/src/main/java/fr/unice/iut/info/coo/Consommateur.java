@@ -1,21 +1,42 @@
 package fr.unice.iut.info.coo;
 
+
 /**
  * <!-- begin-user-doc -->
  * <!--  end-user-doc  -->
  * @generated
  */
 
-public class User extends Bus
+public class Consommateur extends Bus
 {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
 	 * @generated
+	 * @ordered
 	 */
-	public User(){
+	
+	public String Nom;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!--  end-user-doc  -->
+     *
+     * @param Nom
+     * @param messages
+     * @generated
+     */
+    public Consommateur(String Nom, String messages) {
 		super();
+
 	}
+
+    /**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @param nom
+	 */
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -24,20 +45,8 @@ public class User extends Bus
 	 * @ordered
 	 */
 	
-	public Message EmmettreMess(char titre, char text) {
-		Message message = new Message(titre,text);
-		return message;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	public Message DemanderLire(char titre) {
-
+	public Message DemanderLire() {
+		// TODO implement me
 		return null;
 	}
 

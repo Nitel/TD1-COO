@@ -1,30 +1,25 @@
 package fr.unice.iut.info.coo;
 
-
 /**
  * <!-- begin-user-doc -->
  * <!--  end-user-doc  -->
  * @generated
  */
 
-public class Agent extends Bus{
+public class Producteur extends Bus
+{
+
+	private String nom;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
 	 * @generated
-	 * @ordered
+	 * @param nom
 	 */
-	
-	public String Nom;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	public Agent(){
-
+	public Producteur(String nom, String message){
 		super();
+
+
 	}
 
 	/**
@@ -34,7 +29,7 @@ public class Agent extends Bus{
 	 * @ordered
 	 */
 	
-	public Message EffacerMessage() {
+	public Message EmmettreMess() {
 		// TODO implement me
 		return null;
 	}

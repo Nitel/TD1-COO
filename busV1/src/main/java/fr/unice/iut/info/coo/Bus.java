@@ -1,5 +1,4 @@
 package fr.unice.iut.info.coo;
-import java.util.Set;
 
 
 /**
@@ -17,7 +16,7 @@ public class Bus
 	 * @ordered
 	 */
 	
-	public char Nom;
+	public String nom;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -26,7 +25,7 @@ public class Bus
 	 * @ordered
 	 */
 	
-	public Set<Message> messages;
+	public String messages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -34,8 +33,11 @@ public class Bus
 	 * @generated
 	 */
 	public Bus(){
-		super();
+		System.out.println("Création du constructeur normale");
+		this.nom = nom;
+		this.messages = messages;
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,9 +46,8 @@ public class Bus
 	 * @ordered
 	 */
 	
-	public boolean VerifMess(Message message) {
+	public boolean VerifMess() {
 		// TODO implement me
-
 		return false;
 	}
 
